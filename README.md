@@ -7,6 +7,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 To get started with this project, follow the steps below.
 
 ### Step 1: Install Dependencies
+### Step 1: Install Dependencies
 
 First, install the necessary dependencies by running the following command:
 
@@ -18,11 +19,15 @@ yarn
 pnpm install
 # or
 bun install
+```
 
-
-# Step 2: Set Up MySQL Database
+### Step 2: Create a Database in Mysql Databse
+```bash
 CREATE DATABASE school_directory;
+```
 
+### Step 3 : Create a Table in   school_directory Database
+```bash
 Create the schools Table:
 CREATE TABLE schools (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -31,8 +36,10 @@ CREATE TABLE schools (
   city VARCHAR(100) NOT NULL,
   image VARCHAR(255) NOT NULL
 );
+```
 
-# step 3 : Configure the Database Connection:
+# step 3 : Configure the Database Connection in API Folder:
+```
 import mysql from 'mysql';
 
 const db = mysql.createConnection({
@@ -48,14 +55,17 @@ db.connect((err) => {
 });
 
 export default db;
+```
 
 # Step 4: Run the Development Server
+```bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
 # or
+```
 
 
 ### Key Points:
